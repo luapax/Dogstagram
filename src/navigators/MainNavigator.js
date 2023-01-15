@@ -24,7 +24,7 @@ export default function MainNavigator() {
                 options={{
                     tabBarLabel: 'NewsFeed',
                     tabBarIcon: ({ color, size }) => (
-                        <MaterialCommunityIcons name="paw" color={color} size={size} />
+                        <MaterialCommunityIcons name="home" color={color} size={size} />
                     ),
                 }}
             />
