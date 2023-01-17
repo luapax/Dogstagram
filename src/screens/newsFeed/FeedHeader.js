@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     container_header: {
         flex: 1,
         flexDirection: "row",
-        paddingTop: 50,
+        paddingTop: 40,
         backgroundColor: 'white',
         alignContent: 'stretch',
         justifyContent: "space-between"
@@ -56,30 +56,23 @@ const styles = StyleSheet.create({
     container_header_logo: {
         flex: 1,
         flexDirection: "row",
-        // backgroundColor: 'green',
-        height: 60,
         alignItems: 'center',
         paddingLeft: 5,
     },
     container_header_name: {
         flex: 3,
         flexDirection: "row",
-        height: 60,
         alignItems: 'center',
         fontFamily: 'Pacifico',
     },
     container_header_icons: {
-        flex: 1,
+        flex: 1.5,
         flexDirection: "row",
-        // backgroundColor: 'pink',
         alignItems: 'center',
-        height: 60,
-        marginRight: 30,
-        // justifyContent: 'flex-end',
-        // justifyContent: "space-between"
+        marginRight: 15,
+
     },
     container_header_icons_icon: {
-        paddingRight: 10,
-
+        paddingRight: 15,
     }
 });

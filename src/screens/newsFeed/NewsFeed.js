@@ -1,13 +1,57 @@
-import { View, Text, Button } from "react-native";
 import FeedHeader from "./FeedHeader";
-import PhotoList from "./PhotoList";
+import { View, Text, Button, StyleSheet, FlatList, Image } from "react-native";
+import { useQuery } from "@tanstack/react-query";
+import { Photo } from "./Photo";
+
+
+async function getPhotos() {
+    return fetch("https://jsonplaceholder.typicode.com/photos").then((response) =>
+        response.json()
+    );
+}
 
 export default function NewsFeed() {
+    const { data, isLoading } = useQuery(["photos"], getPhotos, {
+        placeholderData: [],
+    });
+
+
     return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <View style={styles.container}>
             <FeedHeader />
-            <PhotoList />
-            <Text>Feed!</Text>
+
+            <View style={styles.container_header}>
+                {isLoading && <Text>Loading...</Text>}
+                <FlatList
+                    data={data}
+                    keyExtractor={(item) => item.id}
+                    isLoading={isLoading}
+                    renderItem={({ item, index }) => {
+                        return (
+                            <>
+                                <Photo item={item} />
+
+                            </>
+                        );
+                    }}
+                ></FlatList>
+            </View >
         </View>
     );
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    container_header: {
+        flex: 10,
+        alignSelf: 'stretch',
+        backgroundColor: 'white',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+
+});
