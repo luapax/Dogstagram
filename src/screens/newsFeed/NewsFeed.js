@@ -5,13 +5,21 @@ import { Photo } from "./Photo";
 
 
 async function getPhotos() {
-    return fetch("https://jsonplaceholder.typicode.com/photos").then((response) =>
-        response.json()
+    return fetch("https://jsonplaceholder.typicode.com/photos").then((response) => response.json()
     );
 }
 
+
+// async function getPhotos() {
+//     return fetch("https://api.thedogapi.com/v1/images/search?size=med&mime_types=jpg&format=json&has_breeds=true&order=RANDOM&page=0").then((response) =>
+//         response.json()
+//     );
+// }
+
+
+
 export default function NewsFeed() {
-    const { data, isLoading } = useQuery(["photos"], getPhotos, {
+    const { data, isLoading } = useQuery(["random"], getPhotos, {
         placeholderData: [],
     });
 
