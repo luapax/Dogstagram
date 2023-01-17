@@ -26,7 +26,7 @@ export default function FeedHeader() {
     return (
         <View style={styles.container_header} >
             <View style={styles.container_header_logo}>
-                <Image source={require('./logo1.jpg')} style={{
+                <Image source={require('./pobrane.png')} style={{
                     height: 60,
                     width: 60,
                 }}></Image>
@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: "row",
         paddingTop: 40,
+        paddingBottom: 3,
         backgroundColor: 'white',
         alignContent: 'stretch',
         justifyContent: "space-between"
@@ -64,6 +65,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: 'center',
         fontFamily: 'Pacifico',
+        paddingLeft: 5,
     },
     container_header_icons: {
         flex: 1.5,

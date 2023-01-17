@@ -1,5 +1,5 @@
 import { View, Text, Image, StyleSheet } from "react-native";
-import { FontAwesome5, Feather, FontAwesome } from "@expo/vector-icons";
+import { Ionicons, Feather, FontAwesome } from "@expo/vector-icons";
 import { Entypo } from "@expo/vector-icons";
 
 export const Photo = ({ item }) => {
@@ -19,7 +19,7 @@ export const Photo = ({ item }) => {
             </View>
             <View style={styles.container_footer}>
                 <View style={styles.container_footer_icons}>
-                    <FontAwesome5 style={styles.container_footer_icons_icon} name="paw" size={24} color="black" />
+                    <Ionicons style={styles.container_footer_icons_icon} name="paw" size={24} color="black" />
 
                     <FontAwesome style={styles.container_footer_icons_icon} name="comment-o" size={24} color="black" /><Feather style={styles.container_footer_icons_icon} name="send" size={24} color="black" />
                 </View>
