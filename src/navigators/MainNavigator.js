@@ -1,7 +1,6 @@
-import { Text, View } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { FontAwesome5, MaterialCommunityIcons } from "@expo/vector-icons";
+
 
 import Search from "../screens/search";
 import NewsFeed from "../screens/newsFeed/NewsFeed";
@@ -16,7 +15,6 @@ export default function MainNavigator() {
             tabBarActiveTintColor: '#41A385',
             headerShown: false,
 
-            // tabBarActiveTintColor: '#8A4B2F',
         }}>
             <Tab.Screen
                 name="NewsFeed"
@@ -34,7 +32,7 @@ export default function MainNavigator() {
                 options={{
                     tabBarLabel: 'Search',
                     tabBarIcon: ({ color, size }) => (
-                        <MaterialCommunityIcons name="dog" color={color} size={size} />
+                        <FontAwesome5 name="dog" color={color} size={size} />
                     ),
                 }}
             />
@@ -43,17 +41,3 @@ export default function MainNavigator() {
         </Tab.Navigator>
     );
 }
-
-
-
-
-
-// export default function MainNavigator() {
-//     return (
-//         <Tab.Navigator initialRouteName="ReactNativeApp">
-//             <Tab.Screen name="NewsFeed" component={NewsFeed} />
-//             <Tab.Screen name="Search" component={Search} />
-
-//         </Tab.Navigator>
-//     );
-// }

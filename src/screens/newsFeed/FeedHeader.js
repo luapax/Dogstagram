@@ -1,4 +1,4 @@
-import { View, Text, Button, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image } from "react-native";
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import { useCallback } from 'react';
@@ -7,9 +7,7 @@ import { Octicons, Ionicons, Feather } from '@expo/vector-icons';
 SplashScreen.preventAutoHideAsync();
 
 
-
 export default function FeedHeader() {
-
     const [fontsLoaded] = useFonts({
         'Pacifico': require('./Pacifico-Regular.ttf'),
     });
@@ -26,7 +24,7 @@ export default function FeedHeader() {
     return (
         <View style={styles.container_header} >
             <View style={styles.container_header_logo}>
-                <Image source={require('./pobrane.png')} style={{
+                <Image source={require('./logo.png')} style={{
                     height: 60,
                     width: 60,
                 }}></Image>

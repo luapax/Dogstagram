@@ -1,12 +1,7 @@
 import { useMemo } from "react";
-import {
-    View,
-    Image,
-    useWindowDimensions,
-    TouchableOpacity,
-} from "react-native";
+import { View, Image, useWindowDimensions } from "react-native";
 
-export default SearchPhoto = ({ item, navigation }) => {
+export default SearchPhoto = ({ item }) => {
     const { width } = useWindowDimensions();
     const size = useMemo(() => {
         const imageWidth = width / 3;
@@ -14,12 +9,8 @@ export default SearchPhoto = ({ item, navigation }) => {
     }, [width]);
 
     return (
-        <TouchableOpacity onPress={() => navigation.navigate(id)}>
-            <View style={{ width: width / 3 }}>
-                <Image source={{ uri: item.url }} style={size} />
-            </View>
-        </TouchableOpacity>
+        <View style={{ width: width / 3 }}>
+            <Image source={{ uri: item.url }} style={size} />
+        </View>
     );
 };
-
-

@@ -1,5 +1,5 @@
 import FeedHeader from "./FeedHeader";
-import { View, Text, Button, StyleSheet, FlatList, Image } from "react-native";
+import { View, Text, StyleSheet, FlatList } from "react-native";
 import { useQuery } from "@tanstack/react-query";
 import { Photo } from "./Photo";
 
@@ -8,14 +8,6 @@ async function getPhotos() {
     return fetch("https://jsonplaceholder.typicode.com/photos").then((response) => response.json()
     );
 }
-
-
-// async function getPhotos() {
-//     return fetch("https://api.thedogapi.com/v1/images/search?size=med&mime_types=jpg&format=json&has_breeds=true&order=RANDOM&page=0").then((response) =>
-//         response.json()
-//     );
-// }
-
 
 
 export default function NewsFeed() {
@@ -34,11 +26,10 @@ export default function NewsFeed() {
                     data={data}
                     keyExtractor={(item) => item.id}
                     isLoading={isLoading}
-                    renderItem={({ item, index }) => {
+                    renderItem={({ item }) => {
                         return (
                             <>
                                 <Photo item={item} />
-
                             </>
                         );
                     }}
@@ -61,5 +52,4 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center'
     },
-
 });
