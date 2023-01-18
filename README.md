@@ -28,7 +28,5 @@ $ npm run start
 
 
 ## Final Project 
-![alt text](http://url/to/img.png)
-
-
-![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+![IMG-3647](https://user-images.githubusercontent.com/101674163/213278749-085d6cdd-2e23-461c-9e5a-1772cf65aa7f.PNG)
+![IMG-3648](https://user-images.githubusercontent.com/101674163/213278811-d7cb063d-a84d-41c0-8322-4bb9311cc6af.PNG)
